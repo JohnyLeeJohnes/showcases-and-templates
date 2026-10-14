@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+vendor/
+
+# Build output
+dist/
+build/
+
+# Environment files with secrets (commit only *.example files)
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+
+# IDE / OS
+.idea/
+*.iml
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Claude Code
+.claude/worktrees/
+.claude/settings.local.json

@@ -1,0 +1,11 @@
+<%# Flash messages set with req.flash('error' | 'success', message) %>
+<div class="position-fixed top-0 start-50 translate-middle-x mt-5" style="z-index: 1100">
+    <% for (const [type, list] of Object.entries(locals.messages || {})) { %>
+        <% for (const message of list) { %>
+            <div class="alert alert-<%= type === 'error' ? 'danger' : type %> alert-dismissible fade show" role="alert">
+                <%= message %>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        <% } %>
+    <% } %>
+</div>
